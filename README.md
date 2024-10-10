@@ -1,6 +1,3 @@
-Here’s an example of a `README.md` file for a Filament PHP project to get you started. This README provides essential information about the project, setup instructions, and usage guidelines:
-
-```md
 # Filament PHP Project
 
 This is a project built using [FilamentPHP](https://filamentphp.com/), a Laravel admin panel builder for rapidly creating beautiful admin interfaces.
