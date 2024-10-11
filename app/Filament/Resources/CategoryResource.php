@@ -50,12 +50,17 @@ class CategoryResource extends Resource
                     ->searchable(),
 
                 Tables\Columns\ImageColumn::make('image')
+                ->url(fn ($record) => asset('storage/' . $record->image)) // Ensure the full URL is correct
+               // Optional: Makes the image circular
+                ->height(50) // Optional: Set image size
+                ->width(50) // Optional: Set image size
                     ->label('Image')
-                    ->sortable(),
+                    ->sortable()
+                    ->circular(),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created At')
-                    ->dateTime(),
+                    ->dateTime()
             ])
             ->filters([
                 // Add filters if needed
